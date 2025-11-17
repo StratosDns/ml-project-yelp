@@ -1,0 +1,39 @@
+# ----------------------------
+# Data parameters
+# ----------------------------
+states: ["PA", "TN", "FL"]    # you already set this
+min_review_len: 30            # drop extremely short reviews
+K_reviews_per_business: 20    # how many latest reviews to aggregate per business
+
+# ----------------------------
+# Targets
+# ----------------------------
+success_threshold: 4.0        # business is "successful" if avg stars >= this
+
+# ----------------------------
+# Text (TF-IDF) parameters
+# ----------------------------
+tfidf_business:
+  max_features: 30000
+  min_df: 5
+  ngram_range: [1, 2]
+
+tfidf_review:
+  max_features: 20000          # a bit smaller for memory reasons
+  min_df: 5
+  ngram_range: [1, 2]
+
+# ----------------------------
+# Business model parameters
+# ----------------------------
+business:
+  ood_state: "FL"              # held-out region for out-of-distribution eval
+  val_fraction: 0.2            # fraction of in-distribution data for validation
+
+# ----------------------------
+# Review model parameters
+# ----------------------------
+review:
+  max_iter: 2000
+  C: 1.0                       # regularization strength for logistic regression
+  max_reviews: 800000          # NEW: cap on number of reviews for TF-IDF + model

@@ -1,0 +1,4 @@
+raw_dir: "data_raw"
+proc_dir: "data_proc"
+models_dir: "models"
+figs_dir: "figs"
