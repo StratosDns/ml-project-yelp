@@ -15,6 +15,7 @@ data_proc/*
 # Keep vectorizer + empty directory marker
 !data_proc/.gitkeep
 !data_proc/business_tfidf_vectorizer.joblib
+!data_proc/review_tfidf_vectorizer.joblib
 
 
 datasets/
