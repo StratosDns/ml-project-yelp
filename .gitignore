@@ -16,10 +16,7 @@ datasets/
 *.npz
 *.npy
 
-# Models
-models/
-*.joblib
-*.pkl
+
 
 # VSCode
 .vscode/
