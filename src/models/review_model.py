@@ -37,7 +37,7 @@ def train_review_model(paths: dict, params: dict) -> None:
     max_iter = int(review_cfg.get("max_iter", 2000))
     C = float(review_cfg.get("C", 1.0))
 
-    # Optionally create a small validation split (not strictly needed but useful)
+    # Optionally create a small validation split which is useful but not strictly necessary 
     train_idx, val_idx = train_test_split(
         np.arange(len(y)),
         test_size=0.1,

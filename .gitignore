@@ -39,3 +39,6 @@ Thumbs.db
 # Logs
 logs/
 *.log
+
+# English Detection package
+lid.176.bin

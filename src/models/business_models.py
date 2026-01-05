@@ -49,7 +49,8 @@ def train_business_models(paths: dict, params: dict) -> None:
     # ----------------------------
     # Train/val split (only on in-distribution states)
     # For now, we do a standard random split.
-    # You can later adapt this to a time-based or state-based split if desired.
+    # We can later adapt this to a time-based or state-based split if desired.
+    # It is completely up to future work goals
     # ----------------------------
     val_fraction = float(params.get("business", {}).get("val_fraction", 0.2))
 

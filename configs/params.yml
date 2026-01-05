@@ -4,7 +4,15 @@
 states: ["PA", "TN", "FL"]    # you already set this
 min_review_len: 30            # drop extremely short reviews
 K_reviews_per_business: 20    # how many latest reviews to aggregate per business
-
+# configs/params.yml
+language:
+  enabled: true
+  ascii_ratio_threshold: 0.6
+  min_alpha_chars: 20
+  use_fasttext: true
+  fasttext_model_path: "lid.176.bin"  # adjust if you put it elsewhere
+  fasttext_threshold: 0.8
+  use_langid: false
 # ----------------------------
 # Targets
 # ----------------------------

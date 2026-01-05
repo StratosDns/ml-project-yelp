@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import joblib
 from sklearn.metrics import (
-    mean_squared_error,
+    root_mean_squared_error,
     mean_absolute_error,
     r2_score,
     roc_auc_score,
@@ -77,7 +77,7 @@ def evaluate_business_models(paths: dict, params: dict) -> None:
     # Regression metrics (overall)
     # ----------------------------
     def reg_metrics(y_true, y_pred):
-        rmse = mean_squared_error(y_true, y_pred, squared=False)
+        rmse = root_mean_squared_error(y_true, y_pred, squared=False)
         mae = mean_absolute_error(y_true, y_pred)
         r2 = r2_score(y_true, y_pred)
         return rmse, mae, r2
